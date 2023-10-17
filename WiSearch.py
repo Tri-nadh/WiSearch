@@ -58,10 +58,9 @@ if st.button("Generate Query"):
         st.write("**All The Best, Thankyou for using my Webapp**")
     else:
         st.warning("Please provide at least one input.")
-
+st.markdown("Follow on [GitHub](https://github.com/Tri-nadh/WiSearch)")
     
 st.subheader("What is Google Dorking")
-st.markdown("Follow on [GitHub](https://github.com/Tri-nadh/WiSearch)")
 st.markdown("Google Dorking is a technique of using specialized search operators to find advanced search results. It can be used for job search by using keywords related to the job title, location, company, and other relevant factors. Google Dorking can be a powerful tool for job seekers, but it is important to use it ethically and responsibly.")
 st.markdown('Learn more about [Google Dorking](https://en.wikipedia.org/wiki/Google_hacking)')
 
