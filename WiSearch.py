@@ -2,13 +2,13 @@ import streamlit as st
 
 
 st.markdown("<h1 style='text-align: center;'>WiSearch</h1>", unsafe_allow_html=True)
-st.warning("Welcome! this simple webapp aims to educate job seekers and non-tech peoples about the importance of Google Dorking by making their job search easier.")
+st.warning("Welcome! WiSearch is a simple tool that aims to educate job seekers and non-tech peoples about the importance of Google Dorking by making their job search easier.")
 st.warning("Fill The Following Details and Please Avoid Spell Mistakes")
 # User inputs
 job_title = st.text_input("Job Title")
 skills = st.text_input("Skills: communication, python, java, presentation...")
 location = st.text_input("Location (City/Country)")
-job_board_options = ["linkedin.com", "indeed.com", "naukri.com", "Not Specific"]
+job_board_options = ["Not Specific", "linkedin.com", "indeed.com", "naukri.com"]
 job_board = st.selectbox("Job Board", job_board_options)
 fresher_options = ['Fresher','Experienced']
 fresher = st.selectbox("fresher", fresher_options)
@@ -55,7 +55,7 @@ if st.button("Generate Query"):
         query = query.replace(' ', '+')
         google_search_url = f"https://www.google.com/search?q={query}"
         st.markdown(f"[**Click Here to Go**]({google_search_url})")
-        st.write("**All The Best, Thankyou for using my Webapp**")
+        st.write("**All The Best, Thank you for using WiSearch**")
     else:
         st.warning("Please provide at least one input.")
 st.markdown("Follow on [GitHub](https://github.com/Tri-nadh/WiSearch)")
