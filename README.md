@@ -6,7 +6,7 @@ WiSearch is a tool that allows you to generate Google Dorking queries for job se
 
 ## Usage
 
-1. Access the [Google Dorking Query Generator](https://wisearch.streamlit.app/) via Streamlit (Free and no need for login).
+1. Access the [Tool](https://wisearch.streamlit.app/) via Streamlit (Free and no need for login).
 2. Provide your search criteria in the input fields.
 3. Select the desired job board or choose "Not Specific" to find all over the internet.
 4. Click the "Generate Query" button to generate a hyperlink, and click the hyperlink.
