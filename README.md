@@ -1,10 +1,8 @@
 # WiSearch
-Your job search is now simple with WiSearch.
-# Google Dorking Query Generator
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://wisearch.streamlit.app/)
 
-This tool allows you to generate Google Dorking queries for job searches by providing job-related criteria. Google Dorking is a search technique that uses Google operators to find specific information on the internet. With this app, you can easily create custom queries for job boards such as LinkedIn, Indeed, Naukri, or a general search on the web.
+WiSearch is a tool that allows you to generate Google Dorking queries for job searches by providing job-related criteria. Google Dorking is a search technique that uses Google operators to find specific information on the internet. With this app, you can easily find jobs on job boards such as LinkedIn, Indeed, Naukri, or All over the web.
 
 ## Usage
 
