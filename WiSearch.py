@@ -1,8 +1,9 @@
 import streamlit as st
+from datetime import datetime, timedelta
 
 
 st.markdown("<h1 style='text-align: center;'>WiSearch</h1>", unsafe_allow_html=True)
-st.warning("Welcome! WiSearch is a simple tool that aims to educate job seekers and non-tech peoples about the importance of Google Dorking by making their job search easier.")
+st.write("Welcome! WiSearch is a simple tool that aims to educate job seekers and non-tech peoples about the importance of Google Dorking by making their job search easier.")
 st.warning("Fill The Following Details and Please Avoid Spell Mistakes")
 # User inputs
 job_title = st.text_input("Job Title")
@@ -12,6 +13,7 @@ job_board_options = ["Not Specific", "linkedin.com", "indeed.com", "naukri.com"]
 job_board = st.selectbox("Job Board", job_board_options)
 fresher_options = ['Fresher','Experienced']
 fresher = st.selectbox("fresher", fresher_options)
+time_range = st.selectbox("Select Time Range", ["All Time", "Today", "This Week", "This Month"])
 
 
 # Dorking
@@ -39,6 +41,22 @@ if st.button("Generate Query"):
 
         elif job_board == "Not Specific":
             query += 'inurl:"careers" OR inurl:"jobs" '
+
+    if time_range:
+        today = datetime.today().date()
+        if time_range == "Today":
+            today = datetime.today().date()
+            today_date = today.strftime("%Y-%m-%d")
+            query += f'daterange:{today_date} '
+        elif time_range == "This Week":
+            week_date = today - timedelta(days=7)
+            today_date = today.strftime("%Y-%m-%d")
+            query += f'after:{week_date} '
+        elif time_range == "This Month":
+            month_date = today - timedelta(days=30)
+            today_date = today.strftime("%Y-%m-%d")
+            query += f'after:{month_date} '
+
 
     if fresher:
         if fresher == 'Fresher':
