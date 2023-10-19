@@ -35,7 +35,7 @@ if st.button("Generate Query"):
             query += f'site:"{job_board}" '
 
         elif job_board == 'naukri.com':
-            query += 'site:"{job_board}" '
+            query += f'site:"{job_board}" '
 
         elif job_board == "Not Specific":
             query += 'inurl:"careers" OR inurl:"jobs" '
