@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 
 st.markdown("<h1 style='text-align: center;'>WiSearch</h1>", unsafe_allow_html=True)
 st.write("Welcome! WiSearch is a simple tool that aims to educate job seekers and non-tech peoples about the importance of Google Dorking by making their job search easier.")
-st.warning("Fill The Following Details and Please Avoid Spell Mistakes")
+st.warning("1. Fill The Following Details \n 2. Please Avoid Spell Mistakes \n 3. Bookmark this tool for better access")
 # User inputs
 job_title = st.text_input("Job Title")
 skills = st.text_input("Skills: communication, python, java, presentation...")
