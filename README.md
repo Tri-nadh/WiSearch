@@ -28,3 +28,12 @@ You can install Streamlit using pip:
 
 ```bash
 pip install streamlit
+
+## Run on Your own system (Linux/Mac)
+
+```bash
+git clone https://github.com/Tri-nadh/WiSearch
+cd WiSearch
+pip install requirements.txt
+python3 -m streamlit run WiSearch.py
+
