@@ -28,6 +28,7 @@ You can install Streamlit using pip:
 
 ```bash
 pip install streamlit
+```
 
 ## Run on Your own system (Linux/Mac)
 
