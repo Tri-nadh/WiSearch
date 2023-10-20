@@ -1,5 +1,4 @@
 import streamlit as st
-from datetime import datetime
 
 
 st.markdown("<h1 style='text-align: center;'>WiSearch</h1>", unsafe_allow_html=True)
@@ -13,8 +12,6 @@ job_board_options = ["Not Specific", "linkedin.com", "indeed.com", "naukri.com"]
 job_board = st.selectbox("Job Board", job_board_options)
 fresher_options = ['Fresher','Experienced']
 fresher = st.selectbox("fresher", fresher_options)
-time_range = st.selectbox("Select Time Range", ["All Time", "Today", "This Week", "This Month"])
-
 
 # Dorking
 if st.button("Generate Query"):
@@ -42,21 +39,7 @@ if st.button("Generate Query"):
         elif job_board == "Not Specific":
             query += 'inurl:"careers" OR inurl:"jobs" '
 
-    if time_range:
-        today = datetime.today().date()
-        if time_range == "Today":
-            today = datetime.today().date()
-            today_date = today.strftime("%Y-%m-%d")
-            query += f'daterange:{today_date} '
-        elif time_range == "This Week":
-            week_date = today - datetime.timedelta(days=7)
-            today_date = today.strftime("%Y-%m-%d")
-            query += f'after:{week_date} '
-        elif time_range == "This Month":
-            month_date = today - datetime.timedelta(days=30)
-            today_date = today.strftime("%Y-%m-%d")
-            query += f'after:{month_date} '
-
+   
 
     if fresher:
         if fresher == 'Fresher':
