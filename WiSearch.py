@@ -1,5 +1,5 @@
 import streamlit as st
-from datetime import datetime, timedelta
+from datetime import datetime
 
 
 st.markdown("<h1 style='text-align: center;'>WiSearch</h1>", unsafe_allow_html=True)
@@ -49,11 +49,11 @@ if st.button("Generate Query"):
             today_date = today.strftime("%Y-%m-%d")
             query += f'daterange:{today_date} '
         elif time_range == "This Week":
-            week_date = today - timedelta(days=7)
+            week_date = today - datetime.timedelta(days=7)
             today_date = today.strftime("%Y-%m-%d")
             query += f'after:{week_date} '
         elif time_range == "This Month":
-            month_date = today - timedelta(days=30)
+            month_date = today - datetime.timedelta(days=30)
             today_date = today.strftime("%Y-%m-%d")
             query += f'after:{month_date} '
 
