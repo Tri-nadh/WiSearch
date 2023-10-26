@@ -8,7 +8,7 @@ st.warning("1. Fill The Following Details \n 2. Please Avoid Spell Mistakes \n 3
 job_title = st.text_input("Job Title")
 skills = st.text_input("Skills: communication, python, java, presentation...")
 location = st.text_input("Location (City/Country)")
-job_board_options = ["Not Specific", "linkedin.com", "indeed.com", "naukri.com"]
+job_board_options = ["Not Specific", "linkedin.com", "indeed.com", "naukri.com", "lever.co", "greenhouse.io"]
 job_board = st.selectbox("Job Board", job_board_options)
 fresher_options = ['Fresher','Experienced']
 fresher = st.selectbox("fresher", fresher_options)
@@ -39,6 +39,12 @@ if st.button("Generate Query"):
 
         elif job_board == "Not Specific":
             query += 'inurl:"careers" OR inurl:"jobs" '
+
+        elif job_board == 'lever.co':
+            query += f'inurl:"{job_board}" '
+
+        elif job_board == 'greenhouse.io':
+            query += f'inurl:"{job_board}" '
 
     if time_range:
         today = datetime.today().date()
