@@ -41,10 +41,10 @@ if st.button("Generate Query"):
             query += 'inurl:"careers" OR inurl:"jobs" '
 
         elif job_board == 'lever.co':
-            query += f'inurl:"{job_board}" '
+            query += f'site:"{job_board}" '
 
         elif job_board == 'greenhouse.io':
-            query += f'inurl:"{job_board}" '
+            query += f'site:"{job_board}" '
 
     if time_range:
         today = datetime.today().date()
