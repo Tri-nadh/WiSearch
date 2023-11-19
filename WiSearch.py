@@ -4,6 +4,8 @@ from datetime import datetime, timedelta
 st.markdown("<h1 style='text-align: center;'>WiSearch</h1>", unsafe_allow_html=True)
 st.write("Welcome! WiSearch is a simple tool that aims to educate job seekers and non-tech peoples about the importance of Google Dorking by making their job search easier.")
 st.warning("1. Fill The Following Details \n 2. Please Avoid Spell Mistakes \n 3. Bookmark this tool for better access")
+st.header("Internet Search", divider='rainbow')
+
 # User inputs
 job_title = st.text_input("Job Title")
 skills = st.text_input("Skills: communication, python, java, presentation...")
@@ -15,14 +17,23 @@ fresher = st.selectbox("fresher", fresher_options)
 time_range = st.selectbox("Select Time Range", ["All Time", "Today", "This Week", "This Month"])
 
 # Dorking
-if st.button("Generate Query"):
+if st.button("Search"):
     query = ""
 
     if job_title:
         query += f'intitle:"{job_title}" '
 
     if skills:
-        query += f'intext:"{skills}" '
+        query += f'intext:"{skills}" 'st.header("Linkedin Posts Search", divider='rainbow')
+post = st.text_input("Enter One Skill You are looking for")
+query_post = f'intext:{post} inurl:activity intext:"hiring for" OR intext:"Job Openings" site:linkedin.com'
+if st.button("Search"):
+    st.subheader("Here we are")
+    query_post = query_post.replace(' ', '+')
+    google_search_url = f"https://www.google.com/search?q={query_post}"
+    st.markdown(f"[**Click Here to Go**]({google_search_url})")
+    st.write("**All The Best, Thankyou for using my Webapp**")
+
 
     if location:
         query += f'intext:"{location}" '
@@ -81,7 +92,13 @@ if st.button("Generate Query"):
         st.warning("Please provide at least one input.")
 st.markdown("Follow on [GitHub](https://github.com/Tri-nadh/WiSearch)")
     
-st.subheader("What is Google Dorking")
-st.markdown("Google Dorking is a technique of using specialized search operators to find advanced search results. It can be used for job search by using keywords related to the job title, location, company, and other relevant factors. Google Dorking can be a powerful tool for job seekers, but it is important to use it ethically and responsibly.")
-st.markdown('Learn more about [Google Dorking](https://en.wikipedia.org/wiki/Google_hacking)')
+st.header("Linkedin Posts Search", divider='rainbow')
+post = st.text_input("Enter One Skill You are looking for")
+query_post = f'intext:{post} inurl:activity intext:"hiring for" OR intext:"Job Openings" site:linkedin.com'
+if st.button("Search"):
+    st.subheader("Here we are")
+    query_post = query_post.replace(' ', '+')
+    google_search_url = f"https://www.google.com/search?q={query_post}"
+    st.markdown(f"[**Click Here to Go**]({google_search_url})")
+    st.write("**All The Best, Thankyou for using my Webapp**")
 
