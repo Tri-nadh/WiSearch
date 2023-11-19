@@ -24,15 +24,7 @@ if st.button("Search"):
         query += f'intitle:"{job_title}" '
 
     if skills:
-        query += f'intext:"{skills}" 'st.header("Linkedin Posts Search", divider='rainbow')
-post = st.text_input("Enter One Skill You are looking for")
-query_post = f'intext:{post} inurl:activity intext:"hiring for" OR intext:"Job Openings" site:linkedin.com'
-if st.button("Search"):
-    st.subheader("Here we are")
-    query_post = query_post.replace(' ', '+')
-    google_search_url = f"https://www.google.com/search?q={query_post}"
-    st.markdown(f"[**Click Here to Go**]({google_search_url})")
-    st.write("**All The Best, Thankyou for using my Webapp**")
+        query += f'intext:"{skills}" '
 
 
     if location:
