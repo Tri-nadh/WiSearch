@@ -87,7 +87,7 @@ st.markdown("Follow on [GitHub](https://github.com/Tri-nadh/WiSearch)")
 st.header("Linkedin Posts Search", divider='rainbow')
 post = st.text_input("Enter One Skill You are looking for")
 query_post = f'intext:{post} inurl:activity intext:"hiring for" OR intext:"Job Openings" site:linkedin.com'
-if st.button("Search"):
+if st.button("Get Query"):
     st.subheader("Here we are")
     query_post = query_post.replace(' ', '+')
     google_search_url = f"https://www.google.com/search?q={query_post}"
